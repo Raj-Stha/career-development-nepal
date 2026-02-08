@@ -1,0 +1,85 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum Role {
+    user
+    admin
+    editor
+}
+
+model User {
+    id                           String     @id @default(uuid())
+    name                         String
+    email                        String     @unique
+    password                     String?
+    role                         Role       @default(user)
+    image                        String?
+    provider                     String?
+    providerId                   String?
+    emailVerificationToken       String?
+    emailVerificationTokenExpiry DateTime?
+    emailVerified                Boolean    @default(false)
+    isDeleted                    Boolean    @default(false)
+    createdAt                    DateTime   @default(now())
+    updatedAt                    DateTime   @updatedAt
+    categories                   Category[]
+    posts                        Post[]
+    Popup                        Popup[]
+
+    @@unique([provider, providerId])
+}
+
+model Category {
+    id          String   @id @default(uuid())
+    name        String   @unique
+    slug        String   @unique
+    image       String?
+    description String?
+    priority    Int?
+    userId      String
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    user  User   @relation(fields: [userId], references: [id])
+    blogs Post[]
+}
+
+model Post {
+    id          String   @id @default(uuid())
+    title       String
+    slug        String   @unique
+    image       String?
+    video       String?
+    excerpt     String?
+    description String
+    gallery     Json?
+    isFeatured  Boolean  @default(false)
+    map         String?
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    categoryId String
+    authorId   String
+
+    category Category @relation(fields: [categoryId], references: [id])
+    author   User     @relation(fields: [authorId], references: [id])
+}
+
+model Popup {
+    id        String   @id @default(uuid())
+    image     String?
+    video     String?
+    gif       String?
+    userId    String
+    user      User     @relation(fields: [userId], references: [id])
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("popup")
+}
