@@ -7,14 +7,15 @@ export default function HeroSection() {
       {/* Background Image with Blur */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/beautiful-japanese-forest-scene.jpg"
+          src="/banner/banner-5.jpg"
           alt="Misty Forest Background"
           fill
-          className="object-cover blur-sm scale-110"
+          // className="object-cover blur-sm scale-110"
           priority
         />
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/60 via-teal-800/50 to-slate-900/70 z-10"></div>
+
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/60 via-black/30 to-slate-900/70 z-10"></div>
       </div>
 
       {/* Content */}
@@ -23,19 +24,15 @@ export default function HeroSection() {
           {/* Content Section */}
           <div className="order-2 md:order-1 text-center md:text-left">
             <div className="w-1/2 h-1 bg-white my-4 md:my-8 mx-auto md:mx-0"></div>
-
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold text-white poppins-text drop-shadow-lg leading-tight">
-              VOICING <br />
-              STORIES <br />
-              SHARING <br />
-              INSIGHT.
-            </h1>
-
-            <div className="inline-block bg-secondary py-1 px-4 mt-4 text-xl sm:text-2xl text-white font-bold poppins-text">
-              Rajib Khatry
+            <div className="inline-block bg-primary shadow-2xl rounded-sm py-1 px-4 mb-3 text-xl sm:text-2xl text-white font-bold poppins-text">
+              Career Development Nepal
             </div>
 
-            <p className="max-w-md italic pl-4 text-slate-100 mt-3 text-base sm:text-lg lg:text-xl drop-shadow-md mx-auto md:mx-0">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl  font-bold text-white poppins-text drop-shadow-lg leading-tight">
+              Because Every Career Deserves the Right Start.
+            </h1>
+
+            <p className="max-w-md italic  text-slate-100 mt-3 text-base sm:text-lg lg:text-xl drop-shadow-md mx-auto md:mx-0">
               Where Thoughts Meets Expectation
             </p>
 
@@ -51,7 +48,7 @@ export default function HeroSection() {
                 <div className="relative  overflow-hidden ">
                   <img
                     className="h-[380px] md:h-[650px] w-auto object-cover object-bottom "
-                    src="/rajiv site-03.png"
+                    src="/banner/person.png"
                     alt="Rajib Khatry"
                   />
                 </div>
