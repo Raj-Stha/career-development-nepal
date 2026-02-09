@@ -51,12 +51,12 @@ export default function Header() {
 
   return (
     <header
-      className={`poppins-text fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`poppins-text px-4 fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isHome
           ? isScrolled
-            ? "bg-[#000] backdrop-blur-md shadow-lg border-b border-slate-200/50"
+            ? "bg-white/30 backdrop-blur-md shadow-lg border-b border-slate-200/50"
             : "bg-transparent"
-          : "bg-[#000] backdrop-blur-md shadow-lg border-b border-slate-200/50"
+          : "bg-white/80 backdrop-blur-md shadow-lg border-b border-slate-200/50"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-6">
@@ -69,9 +69,11 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0 group">
             <div>
               <img
-                src="/rajiv site-02.png"
-                alt="Rajib Khatry"
-                className="h-24 w-auto"
+                src="/logo/cdn-logo.png"
+                alt="Career Development Nepal"
+                className={`h-18 w-auto ${
+                  isHome && !isScrolled ? "brightness-0 invert" : ""
+                }`}
               />
             </div>
           </Link>
@@ -87,10 +89,16 @@ export default function Header() {
                     href={item.href}
                     className={`relative px-4 py-2 text-sm lg:text-base font-medium transition-all duration-300 rounded-lg group ${
                       isActive
-                        ? "text-white bg-[#003366] shadow-md"
-                        : "text-white hover:text-[#003366] hover:bg-slate-50"
+                        ? "text-black  shadow-md"
+                        : "text-black hover:text-[#003366] hover:bg-slate-50"
                     }, 
-                     ${isScrolled ? "py-3" : ""}
+                    ${
+                      !isHome
+                        ? "text-black"
+                        : !isScrolled
+                          ? "text-white"
+                          : "py-3"
+                    }
                     `}
                   >
                     <span className="relative z-10">{item.label}</span>

@@ -51,9 +51,9 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.4553 0.1428 253.54);
+  --primary: #30a2d5;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.6741 0.191 42.86);
+  --secondary: #002245;
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
@@ -136,7 +136,6 @@
     font-family: var(--font-playfair-display);
   }
 }
-
 
 html {
   scroll-behavior: smooth;
