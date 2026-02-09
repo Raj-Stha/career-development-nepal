@@ -24,8 +24,6 @@ export default function Header() {
 
   const navItems = [
     { href: "/post?category=vlogs", label: "Vlogs" },
-    { href: "/post?category=news", label: "News" },
-    { href: "/post?category=content", label: "Content" },
     { href: "/youtube", label: "Youtube" },
     { href: "/#contact", label: "Contact Me" },
   ];
@@ -124,7 +122,7 @@ export default function Header() {
 
             <div className="h-6 w-px bg-slate-300"></div>
 
-            <div className="bg-gradient-to-r from-slate-50 to-slate-100 px-4 py-2 rounded-lg border border-slate-200">
+            <div className="bg-white/70 backdrop-blur-2xl px-4 py-2 rounded-sm ">
               <CurrentTime />
             </div>
           </div>
