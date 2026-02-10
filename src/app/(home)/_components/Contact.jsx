@@ -121,11 +121,11 @@ export default function ContactSection() {
                   </h4>
                   <p className="text-base text-gray-600 nunito-text">
                     <a
-                      href="mailto:careerdevelopment@gmail.com"
+                      href="mailto:careerdevelopmentn@gmail.com"
                       className="hover:underline"
-                      aria-label="Email careerdevelopment@gmail.com"
+                      aria-label="Email careerdevelopmentn@gmail.com"
                     >
-                      careerdevelopment@gmail.com
+                      careerdevelopmentn@gmail.com
                     </a>
                   </p>
                 </div>
