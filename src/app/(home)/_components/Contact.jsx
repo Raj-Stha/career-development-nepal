@@ -42,7 +42,7 @@ export default function ContactSection() {
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(
-          errorData.error || "Something went wrong while sending the message."
+          errorData.error || "Something went wrong while sending the message.",
         );
       }
 
@@ -58,7 +58,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-20 lg:py-[120px]" id="contact">
+    <section
+      className="relative z-10 overflow-hidden bg-white py-20 lg:py-[120px]"
+      id="contact"
+    >
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap lg:justify-between -mx-4">
           {/* Contact Information */}
@@ -89,7 +92,7 @@ export default function ContactSection() {
                   </p>
                 </div>
               </div>
-              <div className="mb-8 flex w-full max-w-[370px]">
+              {/* <div className="mb-8 flex w-full max-w-[370px]">
                 <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded-lg bg-stone-100 text-stone-600 sm:h-[70px] sm:max-w-[70px]">
                   <Phone className="w-8 h-8" />
                 </div>
@@ -107,7 +110,7 @@ export default function ContactSection() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-8 flex w-full max-w-[370px]">
                 <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded-lg bg-stone-100 text-stone-600 sm:h-[70px] sm:max-w-[70px]">
                   <Mail className="w-8 h-8" />
@@ -118,11 +121,11 @@ export default function ContactSection() {
                   </h4>
                   <p className="text-base text-gray-600 nunito-text">
                     <a
-                      href="mailto:rajibkhatry@gmail.com"
+                      href="mailto:careerdevelopment@gmail.com"
                       className="hover:underline"
-                      aria-label="Email rajibkhatry@gmail.com"
+                      aria-label="Email careerdevelopment@gmail.com"
                     >
-                      rajibkhatry@gmail.com
+                      careerdevelopment@gmail.com
                     </a>
                   </p>
                 </div>

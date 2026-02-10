@@ -19,7 +19,8 @@ export default function YouTubeSection({ video }) {
     try {
       setError(null);
       const videoItems = video.filter(
-        (item) => item.id && item.id.kind === "youtube#video" && item.id.videoId
+        (item) =>
+          item.id && item.id.kind === "youtube#video" && item.id.videoId,
       );
 
       setVideos(videoItems);
@@ -30,7 +31,7 @@ export default function YouTubeSection({ video }) {
     } catch (error) {
       console.error("Error fetching videos:", error);
       setError(
-        error instanceof Error ? error.message : "Failed to load videos"
+        error instanceof Error ? error.message : "Failed to load videos",
       );
       setVideos([]);
       setLoading(false);
@@ -88,10 +89,10 @@ export default function YouTubeSection({ video }) {
 
   return (
     <div className="min-h-screen  ">
-      <div className="container mx-auto max-w-7xl px-4 py-6">
+      <div className="container mx-auto max-w-7xl px-4 pt-12">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h2 className="poppins-text text-3xl sm:text-4xl md:text-5xl font-semibold text-primary">
+            <h2 className="poppins-text text-3xl sm:text-4xl  font-semibold text-primary">
               Popular Videos
             </h2>
             <div className="w-30 h-[3px] bg-secondary rounded-full mt-2"></div>
@@ -129,10 +130,12 @@ export default function YouTubeSection({ video }) {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600  text-white rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold">
-                          {currentVideo.snippet.channelTitle.charAt(0)}
-                        </span>
+                      <div className="w-10 h-10 rounded-full border-2 border-primary shadow-4xl  text-white  flex items-center justify-center">
+                        <img
+                          src="/logo/cdn-logo.png"
+                          alt="Career Development Nepal"
+                          className=""
+                        />
                       </div>
                       <div>
                         <div className="font-medium">
@@ -159,7 +162,7 @@ export default function YouTubeSection({ video }) {
               <div className="space-y-1">
                 {videos
                   .filter(
-                    (video) => video.id.videoId !== currentVideo?.id.videoId
+                    (video) => video.id.videoId !== currentVideo?.id.videoId,
                   )
                   .map((video, i) =>
                     i < 6 ? (
@@ -196,7 +199,7 @@ export default function YouTubeSection({ video }) {
                           </p>
                         </div>
                       </div>
-                    ) : null
+                    ) : null,
                   )}
               </div>
             </div>

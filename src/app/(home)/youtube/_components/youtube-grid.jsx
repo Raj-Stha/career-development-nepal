@@ -37,7 +37,7 @@ export default function YouTubeGrid({ data }) {
 
   return (
     <>
-      <div className="container mx-auto xl:px-[5%] xl:py-[5%] sm:px-[3%] sm:py-[5%] px-[5%]">
+      <div className="container mx-auto sm:px-[3%] sm:pt-1 sm:pb-[2%] px-[5%]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {processedVideos.map((video) => (
             <Card
@@ -69,8 +69,12 @@ export default function YouTubeGrid({ data }) {
                 <div className="flex gap-3">
                   {/* Channel Avatar */}
                   <div className="flex-shrink-0">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-sm">
-                      {video.channel.charAt(0).toUpperCase()}
+                    <div className="w-10 h-10 rounded-full border-2 border-primary shadow-4xl  text-white  flex items-center justify-center">
+                      <img
+                        src="/logo/cdn-logo.png"
+                        alt="Career Development Nepal"
+                        className=""
+                      />
                     </div>
                   </div>
 
