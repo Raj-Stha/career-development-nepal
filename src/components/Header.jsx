@@ -148,8 +148,8 @@ export default function Header() {
               <div className="flex flex-col space-y-8 mt-8">
                 <div className="text-center pb-6 border-b border-slate-200">
                   <Link href="/" onClick={() => setMobileMenuOpen(false)}>
-                    <h2 className="text-2xl font-bold bg-gradient-to-r from-[#003366] to-[#004080] bg-clip-text text-transparent tracking-wide">
-                      Rajib Khatry
+                    <h2 className="text-xl font-bold bg-gradient-to-r from-[#003366] to-[#004080] bg-clip-text text-transparent tracking-wide">
+                      Career Development Nepal
                     </h2>
                   </Link>
                 </div>
