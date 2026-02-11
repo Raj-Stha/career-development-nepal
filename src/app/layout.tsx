@@ -30,35 +30,36 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Rajib Khatry",
+  title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Career Development Nepal",
   description:
-    "Explore videos, insights, and educational content by Rajib Khatry on politics, science, fact-checking, and global issues.",
+    "Career Development Nepal inspires and empowers individuals to take control of their careers through practical guidance, motivation, and real-world insights. Turn confusion into clarity and potential into progress—without borders.",
+
   keywords:
     process.env.NEXT_PUBLIC_WEBSITE_META_KEYWORDS_POSTS ||
-    "Rajib Khatry, politics, analysis, science, fact check, Indian news, environment",
+    "career development Nepal, career guidance, job preparation, skill development, motivation, education Nepal",
+
   openGraph: {
-    title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Rajib Khatry",
+    title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Career Development Nepal",
     description:
-      "Official platform of Rajib Khatry – Educator, Political Analyst & Content Creator. Explore thought-provoking content on science, democracy, and rationalism.",
+      "Career Development Nepal is a platform dedicated to inspiring, guiding, and empowering individuals to build meaningful careers through clarity, preparation, and progress—without borders.",
     images: [
       {
         url:
-          process.env.NEXT_PUBLIC_WEBSITE_META_OG_IMAGE ||
-          "https://yourdomain.com/og-image.jpg",
+          process.env.NEXT_PUBLIC_WEBSITE_META_OG_IMAGE || "/logo/cdn-logo.png",
         width: 1200,
         height: 630,
-        alt: "Rajib Khatry - Open Graph Image",
+        alt: "Career Development Nepal – Career Guidance & Growth",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Rajib Khatry",
+    title: process.env.NEXT_PUBLIC_WEBSITE_NAME || "Career Development Nepal",
     description:
-      "Content that inspires critical thinking, rationalism, and democratic values. Follow Rajib Khatry for high-quality educational insights.",
+      "Practical career guidance, motivation, and real-world insights to help you believe, prepare, and succeed—no matter where you are.",
     images: [
-      process.env.NEXT_PUBLIC_WEBSITE_META_OG_IMAGE ||
-        "https://yourdomain.com/og-image.jpg",
+      process.env.NEXT_PUBLIC_WEBSITE_META_OG_IMAGE || "/logo/cdn-logo.png",
     ],
   },
 };
