@@ -24,7 +24,7 @@ export default function HeroSection() {
           {/* Content Section */}
           <div className="order-2 md:order-1 text-center md:text-left">
             <div className="w-1/2 h-1 bg-white my-4 md:my-8 mx-auto md:mx-0"></div>
-            <div className="inline-block bg-primary shadow-2xl rounded-sm py-1 px-4 mb-3 text-xl sm:text-2xl text-white font-bold poppins-text">
+            <div className="inline-block bg-primary shadow-2xl rounded-sm py-1  px-4 mb-3 text-xl sm:text-2xl text-white font-bold poppins-text">
               Career Development Nepal
             </div>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </div>
 
           {/* Image Section */}
-          <div className="relative order-1 md:order-2 flex items-end justify-center  h-full min-h-[500px] md:min-h-[800px]">
+          <div className="hidden sm:flex relative order-1 md:order-2  items-end justify-center  h-full min-h-[500px] md:min-h-[800px]">
             <div className="relative w-full max-w-md mx-auto xl:max-w-lg">
               {/* Profile Image Container */}
               <div className="relative group">

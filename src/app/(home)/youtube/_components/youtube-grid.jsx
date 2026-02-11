@@ -38,7 +38,7 @@ export default function YouTubeGrid({ data }) {
   return (
     <>
       <div className="container mx-auto sm:px-[3%] sm:pt-1 sm:pb-[2%] px-[5%]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-6">
           {processedVideos.map((video) => (
             <Card
               key={video.id}
