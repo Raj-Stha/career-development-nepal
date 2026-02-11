@@ -36,7 +36,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8">
           {/* About Me Section */}
           <div className="md:col-span-1 flex flex-col items-center justify-center">
-            <div className="relative  w-36  h-full   ">
+            <div className="relative  w-36  h-24 sm:h-full   ">
               <Image
                 src="/logo/cdn-logo.png"
                 alt="Rajib Khatry Avatar"
@@ -44,7 +44,7 @@ export default function Footer() {
                 sizes="118px"
               />
             </div>
-            <h3 className="text-2xl  font-semibold mb-4 poppins-text text-center text-primary">
+            <h3 className="text-2xl  font-semibold mb-4 poppins-text  sm:text-center text-primary">
               Career Development Nepal
             </h3>
           </div>
