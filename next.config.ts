@@ -12,8 +12,7 @@ const nextConfig: NextConfig = {
       "img.youtube.com",
     ],
   },
-  allowedDevOrigins: ["http://localhost:3000"],
-
+  allowedDevOrigins: ["https://career-development-nepal.vercel.app"],
 };
 
 export default nextConfig;

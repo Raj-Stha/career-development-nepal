@@ -5,7 +5,7 @@ async function getPost(slug) {
   try {
     const response = await fetch(
       `${
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
+        process.env.NEXT_PUBLIC_API_URL || "https://career-development-nepal.vercel.app"
       }/api/public/blog?slug=${slug}`,
       {
         cache: "no-store",
@@ -27,7 +27,7 @@ async function getRelatedPosts(categorySlug, currentSlug) {
   try {
     const response = await fetch(
       `${
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
+        process.env.NEXT_PUBLIC_API_URL || "https://career-development-nepal.vercel.app"
       }/api/public/blog?category=${categorySlug}&limit=6`,
       {
         cache: "no-store",

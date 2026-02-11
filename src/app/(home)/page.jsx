@@ -28,14 +28,22 @@ export default async function Home() {
     contentData,
     volgsData,
   ] = await Promise.all([
-    safeFetch("http://localhost:3000/api/public/blog?limit=12&sort=latest"),
-    safeFetch("http://localhost:3000/api/public/blog?featured=true&limit=12"),
-    safeFetch("http://localhost:3000/api/public/blog?category=news&limit=10"),
-    safeFetch("http://localhost:3000/api/youtube"),
     safeFetch(
-      "http://localhost:3000/api/public/blog?category=content&limit=10"
+      "https://career-development-nepal.vercel.app/api/public/blog?limit=12&sort=latest",
     ),
-    safeFetch("http://localhost:3000/api/public/blog?category=vlogs&limit=10"),
+    safeFetch(
+      "https://career-development-nepal.vercel.app/api/public/blog?featured=true&limit=12",
+    ),
+    safeFetch(
+      "https://career-development-nepal.vercel.app/api/public/blog?category=news&limit=10",
+    ),
+    safeFetch("https://career-development-nepal.vercel.app/api/youtube"),
+    safeFetch(
+      "https://career-development-nepal.vercel.app/api/public/blog?category=content&limit=10",
+    ),
+    safeFetch(
+      "https://career-development-nepal.vercel.app/api/public/blog?category=vlogs&limit=10",
+    ),
   ]);
 
   return (

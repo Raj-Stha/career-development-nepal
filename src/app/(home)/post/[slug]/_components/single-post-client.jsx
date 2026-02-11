@@ -18,7 +18,9 @@ import { FacebookProvider, Comments, Page } from "react-facebook";
 
 // Add this function after the imports
 function generateStructuredData(post) {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_API_URL ||
+    "https://career-development-nepal.vercel.app";
   const postUrl = `${baseUrl}/post/${post.slug}`;
   const imageUrl = post.image
     ? post.image.startsWith("http")
@@ -87,7 +89,8 @@ export default function SinglePostClient({ post, relatedPosts }) {
 
   const handlePrevImage = () => {
     setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + post.gallery.length) % post.gallery.length
+      (prevIndex) =>
+        (prevIndex - 1 + post.gallery.length) % post.gallery.length,
     );
   };
 
